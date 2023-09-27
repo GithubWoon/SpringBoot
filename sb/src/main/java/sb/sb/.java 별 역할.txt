@@ -1,0 +1,24 @@
+* Register.java
+이 파일은 데이터베이스 테이블을 나타내는 모델 또는 엔티티 클래스입니다. 
+@Entity 어노테이션을 사용하여 이 클래스가 JPA 엔티티임을 선언하고 있습니다. 
+@Id 어노테이션이 붙은 필드는 테이블의 기본 키(Primary Key)에 해당합니다.
+
+* RegisterController.java
+이 파일은 웹 요청을 처리하는 컨트롤러 클래스입니다. 
+@Controller 어노테이션으로 이 클래스가 Spring MVC 컨트롤러임을 선언하고 있습니다. 
+@RequestMapping("/register")로 이 컨트롤러의 기본 URL 경로를 설정하였으며, 
+@GetMapping("")과 @PostMapping("") 메서드들은 각각 GET 요청과 POST 요청을 처리합니다.
+
+
+* RegisterRepository.java
+이 인터페이스는 JPA 레파지토리입니다. Spring Data JPA를 사용하면, 
+인터페이스를 정의만 해두면 Spring에서 알아서 구현체를 생성해 CRUD(Create-Read-Update-Delete) 작업 등 다양한 데이터베이스 연산을 수월하게 할 수 있습니다.
+
+* SbApplication.java 
+이 파일은 Spring Boot 애플리케이션의 시작점(main 메서드 포함)입니다. 
+여기에서 SpringApplication.run 메서드를 호출하여 애플리케이션을 시작합니다.
+
+* ServletInitializer.java 
+Servlet 3.x API에 존재하는 ServletContainerInitializer 인터페이스를 구현한 것으로, 
+웹 애플리케이션이 시작될 때 초기화 작업 등을 수월하게 할 수 있도록 돕습니다(Spring Boot에서 자동 생성). 
+주로 외장 Tomcat 등 서블릿 컨테이너에 배치할 때 필요합니다.
